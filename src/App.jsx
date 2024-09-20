@@ -9,7 +9,7 @@ import {
   lineChartConfig,
   multiLayerDoughnutChartOptions,
   semiCircleChartOptions,
-} from "./utils/ChartConfig";
+} from "./utils/chartConfig";
 import {
   barChartData,
   doughnutChartColors,
