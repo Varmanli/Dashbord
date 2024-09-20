@@ -19,7 +19,7 @@ import {
   multiLayerDoughnutChartData,
   semiCirclePercentages,
   semiCircletabs,
-} from "./utils/ChartData";
+} from "./utils/chartData";
 import DoughnutChart from "./components/chart/DoughnutChart";
 
 function App() {
