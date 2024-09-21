@@ -9,7 +9,7 @@ function MobileMenu() {
     <div className="flex justify-around w-full items-cente fixed bottom-0 right-0 left-0 bg-white border-t py-3 text-[10px] text-[#242424] leading-3 ">
       <button className="flex flex-col items-center gap-1">
         <svg
-          className="w-[22px]"
+          width={22}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,11 +20,11 @@ function MobileMenu() {
           />
         </svg>
 
-        <p>Alert</p>
+        <p>Activity</p>
       </button>
       <button className="flex flex-col items-center gap-1">
         <svg
-          className="w-[22px]"
+          width={22}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,7 @@ function MobileMenu() {
       </button>
       <button className="flex flex-col items-center gap-1">
         <svg
-          className="w-[23px]"
+          width={23}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ function MobileMenu() {
       </button>
       <button className="flex flex-col items-center gap-1 justify-around">
         <svg
-          className="w-[18px]"
+          width={18}
           viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -69,9 +69,10 @@ function MobileMenu() {
       </button>
       <button className="flex flex-col items-center gap-1  text-[#5B5FC7]">
         <svg
+          width={17}
+          height={23}
           viewBox="0 0 13 4"
           fill="none"
-          className="w-[17px] h-[23px]"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path

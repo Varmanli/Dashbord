@@ -23,9 +23,11 @@ function MobileHeader() {
         </div>
         <div>
           <p>Tab 2</p>
+          <span className="bg-[#5B5FC7] w-[120px] h-[2px] absolute left-1/3 top-[80px] hidden"></span>
         </div>
         <div>
           <p>Tab 3</p>
+          <span className="bg-[#5B5FC7] w-[120px] h-[2px] absolute left-2/3 top-[80px] hidden"></span>
         </div>
       </div>
     </header>
