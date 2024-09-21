@@ -1,4 +1,4 @@
-import icon from "../../public/icon/Shape.svg";
+import icon from "../../../public/icon/Shape.svg";
 
 function Card({ children, title, description }) {
   return (
