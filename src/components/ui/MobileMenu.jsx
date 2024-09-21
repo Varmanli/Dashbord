@@ -71,7 +71,7 @@ function MobileMenu() {
         <svg
           viewBox="0 0 13 4"
           fill="none"
-          className="w-[20px] h-[23px]"
+          className="w-[17px] h-[23px]"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
