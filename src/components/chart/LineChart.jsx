@@ -108,12 +108,12 @@ function LineChart({ chartData, chartConfig }) {
             onClick={() => handleLegendClick(index)}
           >
             <div
-              className="w-3 h-3"
+              className="w-2 h-2"
               style={{
                 backgroundColor: tabColors[activeTab][index],
               }}
             ></div>
-            <span className="ml-2">{dataset.label}</span>
+            <span className="ml-2 text-xs">{dataset.label}</span>
           </div>
         ))}
       </div>

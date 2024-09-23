@@ -65,18 +65,18 @@ function SemiCircleChart({ data, config, tabs }) {
       {/* نمودار نیم‌دایره */}
       <div className="flex items-end justify-center md:mt-5  w-[190px] md:w-[75%]  h-[132px] md:h-auto mx-auto relative md:mb- ">
         {/* نمایش درصد زیر نمودار */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[20%]">
-          <p className="font-sans text-[34px] md:text-[32px] font-bold md:font-semibold leading-[41px] tracking-[0.4px] text-center text-[#242424]">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[12%] md:bottom-[23%]">
+          <p className="text-[34px] md:text-[32px] font-bold md:font-semibold leading-[41px] tracking-[0.4px] text-center text-[#242424]">
             {data[activeTab]}%
           </p>
         </div>
 
         {/* مقیاس‌های 0 و 100 درصد */}
-        <p className="mb-8 mr-1 font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <p className="absolute left-[-18px] bottom-5 md:bottom-10 md:left-[-10px] text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           0
         </p>
         <canvas ref={chartRef} className="w-full h-full" />
-        <p className="mb-8 ml-1 font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <p className="absolute right-[-25px] bottom-5 md:bottom-10 md:right-[-20px]   text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           100
         </p>
       </div>
@@ -86,12 +86,12 @@ function SemiCircleChart({ data, config, tabs }) {
         {["Label 1", "Label 2"].map((label, index) => (
           <div key={index} className="flex items-center mx-2 md:mt-2">
             <div
-              className="w-3 h-3 mr-2 "
+              className="w-2 h-2 mr-2 "
               style={{
                 backgroundColor: index === 0 ? "#00B7C3" : "#D1D1D1",
               }}
             />
-            <span className="text-gray-700 text-sm">{label}</span>
+            <span className="text-[#242424] text-xs">{label}</span>
           </div>
         ))}
       </div>

@@ -47,7 +47,7 @@ function MultiLayerDoughnutChart({ data, options }) {
   }, [data, options]); // وابستگی به data و options برای به‌روزرسانی نمودار
 
   return (
-    <div className="w-[235px] h-[235px] md:w-[90%]  md:h-auto mx-auto">
+    <div className="w-[235px] h-[235px] md:w-[100%]  md:h-auto mx-auto">
       <canvas ref={chartRef}></canvas>
     </div>
   );
