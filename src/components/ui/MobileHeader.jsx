@@ -1,18 +1,26 @@
-import avatar from "../../../public/images/avatar.png";
-import bot from "../../../public/icon/bot.svg";
-import shape from "../../../public/icon/Shape.svg";
-
 function MobileHeader() {
   return (
     <header className="flex flex-col gap-3 md:hidden">
       <div className="flex justify-between items-center px-[16px]">
         <div className="flex justify-center items-center gap-5">
-          <img src={avatar} alt="avatar" className="w-[32px] h-[32px]" />
+          <img
+            src="/images/Avatar.png"
+            alt="avatar"
+            className="w-[32px] h-[32px]"
+          />
           <h2 className="font-bold text-[26px] text-[#242424]">Van Arsdel</h2>
         </div>
         <div className="flex items-center gap-5">
-          <img src={bot} alt="bot svg" className="w-[24px] h-[24px]" />
-          <img src={shape} alt="shape" className="w-[24px] h-[24px]" />
+          <img
+            src="/icon/Bot.svg"
+            alt="bot icon"
+            className="w-[24px] h-[24px]"
+          />
+          <img
+            src="/icon/Shape.svg"
+            alt="shape"
+            className="w-[24px] h-[24px]"
+          />
         </div>
       </div>
       {/* {tab} */}

@@ -3,7 +3,7 @@ import icon from "../../../public/icon/Shape.svg";
 function Card({ children, title, description, className, details }) {
   return (
     <div
-      className={`md:h-[400px] flex flex-col justify-between gap-[20px] p-[16px]  md:gap-0 border-t border-t-white shadow-[0_0px_2px_0px_rgba(0,0,0,0.12),_0_2px_4px_0px_rgba(0,0,0,0.14)] rounded-lg relative ${className}`}
+      className={`lg:h-[400px] flex flex-col justify-between gap-[20px] p-[16px]  md:gap-0 border-t border-t-white shadow-[0_0px_2px_0px_rgba(0,0,0,0.12),_0_2px_4px_0px_rgba(0,0,0,0.14)] rounded-lg relative ${className}`}
     >
       <div className="flex justify-between items-center ">
         <div>

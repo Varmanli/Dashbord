@@ -1,11 +1,10 @@
-import avatar from "../../../public/images/Avatar2.png";
 function DesktopNav() {
   return (
     <div className="flex items-center justify-between w-full h-[60px] px-5 border-b">
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-3">
           <img
-            src={avatar}
+            src="/images/Avatar2.png"
             alt="Avatar"
             className="w-[32px] h-[32px] rounded"
           />
