@@ -1,7 +1,7 @@
 import DesktopLayout from "../components/ui/DesktopLayout";
 import DesktopMenu from "../components/ui/DesktopMenu";
 import DesktopNav from "../components/ui/DesktopNav";
-import TreeView from "../components/ui/Treeview";
+import TreeView from "../components/ui/TreeView";
 import ToolBar from "../components/ui/ToolBar";
 import MobileLayout from "../components/ui/MobileLayout";
 
