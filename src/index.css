@@ -9,8 +9,8 @@
 }
 
 .custom-scroll::-webkit-scrollbar {
-  width: 8px; /* عرض اسکرول */
-  height: 8px; /* ارتفاع اسکرول */
+  width: 1px; /* عرض اسکرول */
+  height: 1px; /* ارتفاع اسکرول */
 }
 
 .custom-scroll::-webkit-scrollbar-track {
