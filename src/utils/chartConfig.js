@@ -93,7 +93,7 @@ export const barChartOptions = {
   maintainAspectRatio: false, // اجازه تغییر ابعاد نمودار
 };
 
-//bmulti bar chart config
+//multi bar chart config
 export const multiBarOptions = {
   maintainAspectRatio: false, // غیرفعال کردن حفظ نسبت ابعاد
   scales: {

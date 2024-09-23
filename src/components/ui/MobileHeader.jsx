@@ -4,7 +4,7 @@ import shape from "../../../public/icon/Shape.svg";
 
 function MobileHeader() {
   return (
-    <header className="flex flex-col gap-3">
+    <header className="flex flex-col gap-3 md:hidden">
       <div className="flex justify-between items-center px-[16px]">
         <div className="flex justify-center items-center gap-5">
           <img src={avatar} alt="avatar" className="w-[32px] h-[32px]" />

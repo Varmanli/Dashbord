@@ -41,17 +41,17 @@ function SemiCircleChart({ data, config, tabs }) {
   }, [activeTab, data, config]);
 
   return (
-    <div>
+    <div className="md:mb-[50px]">
       {/* دکمه‌های تب */}
-      <div className="flex justify-center ">
+      <div className="flex justify-center md:justify-start">
         {tabs.map((tabLabel, index) => (
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`relative text-xs px-4 py-2 ${
+            className={`relative text-xs md:text-[14px] px-4 py-2 md:px-2  ${
               activeTab === index
-                ? "text-[#242424] font-bold"
-                : "text-[#808080] font-sans  font-semibold leading-[18px] text-left"
+                ? "text-[#242424] font-semibold"
+                : "text-[#808080] font-sans  leading-[18px] text"
             }`}
           >
             {tabLabel}
@@ -63,29 +63,28 @@ function SemiCircleChart({ data, config, tabs }) {
       </div>
 
       {/* نمودار نیم‌دایره */}
-      <div className="w-[190px] h-[132px] mx-auto relative">
-        <canvas ref={chartRef} className="w-full h-full" />
-
+      <div className="flex items-end justify-center md:mt-5  w-[190px] md:w-[75%]  h-[132px] md:h-auto mx-auto relative md:mb- ">
         {/* نمایش درصد زیر نمودار */}
         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[20%]">
-          <p className="font-sans text-[34px] font-bold leading-[41px] tracking-[0.4px] text-center text-[#242424]">
+          <p className="font-sans text-[34px] md:text-[32px] font-bold md:font-semibold leading-[41px] tracking-[0.4px] text-center text-[#242424]">
             {data[activeTab]}%
           </p>
         </div>
 
         {/* مقیاس‌های 0 و 100 درصد */}
-        <p className="absolute left-[-5%] top-[70%] font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <p className="mb-8 mr-1 font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           0
         </p>
-        <p className="absolute right-[-11%] top-[70%] font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <canvas ref={chartRef} className="w-full h-full" />
+        <p className="mb-8 ml-1 font-sans text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           100
         </p>
       </div>
 
       {/* لیبل ها */}
-      <div className="md:flex hidden justify-center mt-4 ا">
+      <div className="md:flex hidden justify-center">
         {["Label 1", "Label 2"].map((label, index) => (
-          <div key={index} className="flex items-center mx-2">
+          <div key={index} className="flex items-center mx-2 md:mt-2">
             <div
               className="w-3 h-3 mr-2 "
               style={{

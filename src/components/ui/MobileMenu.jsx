@@ -1,12 +1,6 @@
-import alert from "../../../public/icon/Alert.svg";
-import chat from "../../../public/icon/chat.svg";
-import team from "../../../public/icon/Team.svg";
-import calendar from "../../../public/icon/calendar.svg";
-import shape from "../../../public/icon/Shape.svg";
-
 function MobileMenu() {
   return (
-    <div className="flex justify-around w-full items-cente fixed bottom-0 right-0 left-0 bg-white border-t py-3 text-[10px] text-[#242424] leading-3 ">
+    <div className="flex justify-around w-full items-cente fixed bottom-0 right-0 left-0 bg-white border-t py-3 text-[10px] text-[#242424] leading-3 md:hidden">
       <button className="flex flex-col items-center gap-1">
         <svg
           width={22}

@@ -47,7 +47,7 @@ function BarChart({ data, options }) {
   }, []);
 
   return (
-    <div className="w-[271px] h-[170px] mx-auto ">
+    <div className="w-[271px] h-[170px] md:w-[100%] md:h-auto mx-auto ">
       <canvas ref={chartRef} />
     </div>
   );

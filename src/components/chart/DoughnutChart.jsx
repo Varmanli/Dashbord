@@ -78,28 +78,27 @@ function DoughnutChart({ dataSets, colors }) {
 
   return (
     <div>
-      {/* دکمه‌های تب */}
-      <div className="flex justify-center items-center text-xs mb-7">
+      <div className="flex justify-center items-center text-xs mb-7 md:mb-5 mt-2 md:justify-start w-full">
         {["7 days", "30 days", "60 days"].map((tabLabel, index) => (
           <button
             key={index}
             onClick={() => setActiveTab(index)}
-            className={`relative text-xs px-4 py-2 ${
+            className={`relative text-xs md:text-[14px] md:text-sm px-4 py-2 md:px-2 ${
               activeTab === index
-                ? "text-[#242424] font-bold"
-                : "text-[#808080] font-sans  font-semibold leading-[18px] text-left"
+                ? "text-[#242424] font-semibold"
+                : "text-[#808080]"
             }`}
           >
             {tabLabel}
             {activeTab === index && (
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[35px] h-[2.4px] bg-[#5B5FC7]"></span>
+              <span className="absolute bottom-0 left-[25%]  w-[35px] h-[2.4px] bg-[#5B5FC7]"></span>
             )}
           </button>
         ))}
       </div>
 
       {/* نمودار */}
-      <div className="w-[235px] h-[235px] mx-auto ">
+      <div className="w-[235px] h-[235px] md:w-[90%] md:h-[70%] mx-auto mb-2">
         <canvas ref={chartRef}></canvas>
       </div>
     </div>

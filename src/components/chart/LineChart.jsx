@@ -71,22 +71,22 @@ function LineChart({ chartData, chartConfig }) {
   ];
 
   return (
-    <div className="w-full">
+    <div>
       {/* دکمه‌های تب */}
-      <div className="flex justify-center mb-6 space-x-4">
+      <div className="flex justify-center md:justify-start mt-2 mb-6 md:mt-0">
         {["7 days", "30 days", "60 days"].map((tabLabel, index) => (
           <button
             key={index}
-            className={`relative text-xs md:text-sm px-4 py-2 ${
+            className={`relative text-xs md:text-[14px] md:text-sm px-4 py-2  ${
               activeTab === index
                 ? "text-[#242424] font-semibold"
-                : "text-gray-600"
+                : "text-[#808080]"
             }`}
             onClick={() => setActiveTab(index)}
           >
             {tabLabel}
             {activeTab === index && (
-              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[35px] md:w-[55px] h-[2.4px] bg-[#5B5FC7]"></span>
+              <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[35px] md:w-[40px] h-[2.4px] bg-[#5B5FC7]"></span>
             )}
           </button>
         ))}
