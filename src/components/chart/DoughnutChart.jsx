@@ -98,7 +98,7 @@ function DoughnutChart({ dataSets, colors }) {
       </div>
 
       {/* نمودار */}
-      <div className="w-[235px] h-[235px] md:w-[90%] md:h-[70%] mx-auto mb-2">
+      <div className="w-[235px] h-[235px] md:w-[100%] md:h-[70%] mx-auto mb-2">
         <canvas ref={chartRef}></canvas>
       </div>
     </div>
