@@ -182,7 +182,7 @@ const menuData = [
 function DesktopMenu() {
   const [active, setActive] = useState(7);
   return (
-    <div className="flex flex-col items-center bg-[#f0f0f0] lg:text-[10px] md:text-[8px] text-[#616161] pt-2  h-screen w-[6vw]">
+    <div className="flex flex-col items-center bg-[#f0f0f0] lg:text-[10px] md:text-[8px] text-[#616161] pt-2  h-screen md:w-[6vw] lg:w-[5vw]">
       {menuData.map((item) => (
         <button
           className="flex flex-col items-center justify-center gap-1  h-[56px]"

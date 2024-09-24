@@ -72,11 +72,11 @@ function SemiCircleChart({ data, config, tabs }) {
         </div>
 
         {/* مقیاس‌های 0 و 100 درصد */}
-        <p className="absolute left-[-18px] bottom-5 md:bottom-10 md:left-[-10px] text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <p className="absolute left-[-18px] bottom-5 md:bottom-[38px] md:left-[-10px] text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           0
         </p>
         <canvas ref={chartRef} className="w-full h-full" />
-        <p className="absolute right-[-25px] bottom-5 md:bottom-10 md:right-[-20px]   text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
+        <p className="absolute right-[-25px] bottom-5 md:bottom-[38px] md:right-[-20px]   text-[12px] font-semibold leading-[16px] text-left text-[#242424]">
           100
         </p>
       </div>
