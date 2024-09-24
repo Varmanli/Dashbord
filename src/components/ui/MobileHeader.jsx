@@ -5,7 +5,7 @@ function MobileHeader() {
       <div className="flex justify-between items-center px-[16px]">
         <div className="flex justify-center items-center gap-5">
           <img
-            src="/images/Avatar.png"
+            src="assets/images/Avatar.png"
             alt="avatar"
             className="w-[32px] h-[32px]"
           />

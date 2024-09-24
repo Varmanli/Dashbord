@@ -4,7 +4,7 @@ function DesktopNav() {
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-3">
           <img
-            src="/images/Avatar2.png"
+            src="assets/images/Avatar2.png"
             alt="Avatar"
             className="w-[32px] h-[32px] rounded"
           />
