@@ -67,7 +67,7 @@ function DesktopLayout() {
         className="md:w-[48%] lg:w-[25.29%] relative"
         details={true}
       >
-        <div className="absolute flex items-center gap-4 top-6 right-10">
+        <div className="absolute flex items-center gap-4 top-6 right-[50px]">
           <button>
             <svg
               width="14"
