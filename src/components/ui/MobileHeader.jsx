@@ -1,13 +1,10 @@
+import avatar from "../../assets/images/Avatar.png";
 function MobileHeader() {
   return (
     <header className="flex flex-col gap-3 pt-4 md:hidden">
       <div className="flex justify-between items-center px-[16px]">
         <div className="flex justify-center items-center gap-5">
-          <img
-            src="assets/images/Avatar.png"
-            alt="avatar"
-            className="w-[32px] h-[32px]"
-          />
+          <img src={avatar} alt="avatar" className="w-[32px] h-[32px]" />
           <h2 className="font-bold text-[26px] text-[#242424]">Van Arsdel</h2>
         </div>
         <div className="flex items-center gap-5">
