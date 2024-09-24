@@ -16,7 +16,7 @@ function ToolBar() {
             />
           </svg>
         </button>
-        <button className="flex items-center pl-2 gap-3 w-[92px] h-[32px] rounded bg-[#5B5FC7] text-white text-sm font-semibold">
+        <button className="flex items-center pl-2 gap-3 w-[92px] h-[32px] rounded bg-primary text-white text-sm font-semibold">
           <span className="w-4 h-4 border-[1.3px] border-white rounded-full flex items-center justify-center">
             <span className="w-2 h-2 rounded-full"></span>
           </span>
@@ -44,9 +44,9 @@ function ToolBar() {
           .map((_, index) => (
             <button
               key={index}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-[#424242] text-sm font-semibold"
+              className="flex items-center gap-2 px-4 py-2 rounded-lg text-gray1 text-sm font-semibold"
             >
-              <button className="w-[14px] h-[14px] border-[1.3px] border-[#424242] rounded-full flex items-center justify-center">
+              <button className="w-[14px] h-[14px] border-[1.3px] border-gray1 rounded-full flex items-center justify-center">
                 <span className="w-2 h-2 bg-transparent rounded-full"></span>
               </button>
               <span>Text</span>
@@ -58,9 +58,9 @@ function ToolBar() {
           .map((_, index) => (
             <button
               key={index}
-              className="lg:flex items-center gap-2 px-4 py-2 rounded-lg text-[#424242] text-sm font-semibold hidden"
+              className="lg:flex items-center gap-2 px-4 py-2 rounded-lg text-gray1 text-sm font-semibold hidden"
             >
-              <button className="w-[14px] h-[14px] border-[1.3px] border-[#424242] rounded-full flex items-center justify-center">
+              <button className="w-[14px] h-[14px] border-[1.3px] border-gray1 rounded-full flex items-center justify-center">
                 <span className="w-2 h-2 bg-transparent rounded-full"></span>
               </button>
               <span>Text</span>
@@ -72,9 +72,9 @@ function ToolBar() {
           .map((_, index) => (
             <button
               key={index}
-              className="lg:flex items-center gap-2 px-4 py-2 rounded-lg text-[#424242] text-sm font-semibold hidden "
+              className="lg:flex items-center gap-2 px-4 py-2 rounded-lg text-gray1 text-sm font-semibold hidden "
             >
-              <button className="w-[14px] h-[14px] border-[1.3px] border-[#424242] rounded-full flex items-center justify-center">
+              <button className="w-[14px] h-[14px] border-[1.3px] border-gray1 rounded-full flex items-center justify-center">
                 <span className="w-2 h-2 bg-transparent rounded-full"></span>
               </button>
               <span>Text</span>
@@ -82,7 +82,7 @@ function ToolBar() {
           ))}
       </div>
       <div className="flex items-center gap-4">
-        <h2 className="text-[#424242] font-semibold leading-5">Filter</h2>
+        <h2 className="text-gray1 font-semibold leading-5">Filter</h2>
         <div className="flex items-center rounded border-2 px-2 py-1 border-b-black/60">
           <svg
             width="20"

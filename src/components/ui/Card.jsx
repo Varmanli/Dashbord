@@ -5,14 +5,14 @@ function Card({ children, title, description, className, details }) {
     >
       <div className="flex justify-between items-center ">
         <div>
-          <h2 className="text-[#242424] leading-5 text-[15px] font-semibold">
+          <h2 className="text-secendery leading-5 text-[15px] font-semibold">
             {title}
           </h2>
           <p className="text-[12px] leading-4 text-[#616161] hidden md:block">
             {description}
           </p>
         </div>
-        <button className="text-[#424242]">
+        <button className="text-gray1">
           <svg
             width="32"
             height="32"
@@ -30,7 +30,7 @@ function Card({ children, title, description, className, details }) {
       <div className="w-[326px] md:w-auto  ">{children}</div>
       {details && (
         <div className="text-right md:text-left mt-3">
-          <button className="font-sans text-[15px] font-semibold leading-[20px]  tracking-[-0.23px] text-[#5B5FC7]">
+          <button className="font-sans text-[15px] font-semibold leading-[20px]  tracking-[-0.23px] text-primary ">
             View details
           </button>
         </div>

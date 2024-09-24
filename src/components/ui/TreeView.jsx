@@ -69,7 +69,7 @@ function TreeView() {
               />
             </svg>
           </span>
-          <span className="text-[#424242] lg:text-[14px] md:text-xs">
+          <span className="text-gray1 lg:text-[14px] md:text-xs">
             {node.label}
           </span>
         </div>

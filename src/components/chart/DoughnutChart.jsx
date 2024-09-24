@@ -61,13 +61,13 @@ function DoughnutChart({ dataSets, colors, options }) {
             onClick={() => setActiveTab(index)}
             className={`relative text-xs md:text-[14px] md:text-sm px-4 py-2 md:px-2 ${
               activeTab === index
-                ? "text-[#242424] font-semibold"
+                ? "text-secendery font-semibold"
                 : "text-[#808080]"
             }`}
           >
             {tabLabel}
             {activeTab === index && (
-              <span className="absolute bottom-0 left-[25%]  w-[35px] h-[2.4px] bg-[#5B5FC7]"></span>
+              <span className="absolute bottom-0 left-[25%]  w-[35px] h-[2.4px] bg-primary"></span>
             )}
           </button>
         ))}

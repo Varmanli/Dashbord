@@ -8,7 +8,7 @@ function MobileHeader() {
             alt="avatar"
             className="w-[32px] h-[32px]"
           />
-          <h2 className="font-bold text-[26px] text-[#242424]">Van Arsdel</h2>
+          <h2 className="font-bold text-[26px] text-secendery">Van Arsdel</h2>
         </div>
         <div className="flex items-center gap-5">
           <button>
@@ -42,18 +42,18 @@ function MobileHeader() {
         </div>
       </div>
       {/* {tab} */}
-      <div className="flex justify-around border-b pb-2 text-[15px] text-[#242424] ">
+      <div className="flex justify-around border-b pb-2 text-[15px] text-secendery ">
         <div>
           <p className="font-semibold">Tab 1</p>
-          <span className="bg-[#5B5FC7] w-[33%] h-[2px] absolute left-0 top-[97px] "></span>
+          <span className="bg-primary w-[33%] h-[2px] absolute left-0 top-[97px] "></span>
         </div>
         <div>
           <p>Tab 2</p>
-          <span className="bg-[#5B5FC7] w-[120px] h-[2px] absolute left-1/3 top-[97px]  hidden"></span>
+          <span className="bg-primary w-[120px] h-[2px] absolute left-1/3 top-[97px]  hidden"></span>
         </div>
         <div>
           <p>Tab 3</p>
-          <span className="bg-[#5B5FC7] w-[120px] h-[2px] absolute left-2/3 top-[97px] hidden"></span>
+          <span className="bg-primary w-[120px] h-[2px] absolute left-2/3 top-[97px] hidden"></span>
         </div>
       </div>
     </header>

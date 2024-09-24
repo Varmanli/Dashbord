@@ -61,7 +61,7 @@ function MobileMenu() {
 
         <p>Calendar</p>
       </button>
-      <button className="flex flex-col items-center gap-1  text-[#5B5FC7]">
+      <button className="flex flex-col items-center gap-1  text-primary">
         <svg
           width={17}
           height={23}

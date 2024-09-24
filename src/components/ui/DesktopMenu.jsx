@@ -192,7 +192,7 @@ function DesktopMenu() {
           {item.svg}
           <p>{item.title}</p>
           {active === item.id && (
-            <span className="absolute w-[2px] h-12 bg-[#5B5FC7] left-[2px]"></span>
+            <span className="absolute w-[2px] h-12 bg-primary left-[2px]"></span>
           )}
         </button>
       ))}

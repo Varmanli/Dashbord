@@ -12,13 +12,13 @@ function DesktopNav() {
         </div>
         <nav>
           <ul className="flex w-[277px] justify-around items-center">
-            <li className="text-[#242424] text-sm leading-5 font-semibold relative">
+            <li className="text-secendery text-sm leading-5 font-semibold relative">
               Home
-              <span className="w-[35px] h-[4px] rounded-tr-full rounded-tl-full bg-[#5B5FC7] absolute left-0 right-0 bottom-[-20px]"></span>
+              <span className="w-[35px] h-[4px] rounded-tr-full rounded-tl-full bg-primary absolute left-0 right-0 bottom-[-20px]"></span>
             </li>
-            <li className="text-[#424242] text-sm leading-5">Timeline </li>
-            <li className="text-[#424242] text-sm leading-5">Chat</li>
-            <li className="text-[#424242] text-sm leading-5">Asigned to you</li>
+            <li className="text-gray1 text-sm leading-5">Timeline </li>
+            <li className="text-gray1 text-sm leading-5">Chat</li>
+            <li className="text-gray1 text-sm leading-5">Asigned to you</li>
           </ul>
         </nav>
       </div>
