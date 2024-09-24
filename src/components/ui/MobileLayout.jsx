@@ -32,7 +32,7 @@ function MobileLayout() {
   return (
     <div className="md:hidden w-full">
       <MobileHeader />
-      <div className="flex flex-col justify-center items-center gap-4 my-10 w-full mb-20">
+      <div className="flex flex-col justify-center items-center gap-4 mt-5 w-full mb-20">
         <Card title={"Chart 1"} description={"Description"} details={true}>
           <SemiCircleChart
             data={semiCirclePercentages}
