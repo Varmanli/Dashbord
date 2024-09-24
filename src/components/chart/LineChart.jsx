@@ -24,7 +24,7 @@ Chart.register(
   Filler
 );
 
-function LineChart({ chartData, chartConfig }) {
+function LineChart({ chartData, chartConfig, tabColors }) {
   const chartRef = useRef(null);
   const chartInstanceRef = useRef(null);
 
@@ -37,6 +37,7 @@ function LineChart({ chartData, chartConfig }) {
     if (chartInstanceRef.current) {
       chartInstanceRef.current.destroy();
     }
+    if (!chartData || !chartConfig) return null;
 
     const filteredDatasets = chartData[activeTab].datasets.map(
       (dataset, index) => ({
@@ -63,18 +64,12 @@ function LineChart({ chartData, chartConfig }) {
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
     );
   };
-
-  const tabColors = [
-    ["#637CEF", "#00B7C3"],
-    ["#FF6384", "#FF8A65"],
-    ["#4BC0C0", "#FFCE56"],
-  ];
-
+  const tabs = ["7 days", "30 days", "60 days"];
   return (
     <div>
       {/* دکمه‌های تب */}
       <div className="flex justify-center md:justify-start mt-2 mb-6 md:mt-0">
-        {["7 days", "30 days", "60 days"].map((tabLabel, index) => (
+        {tabs.map((tabLabel, index) => (
           <button
             key={index}
             className={`relative text-xs md:text-[14px] md:text-sm px-4 py-2  ${

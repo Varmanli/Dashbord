@@ -1,72 +1,83 @@
-//charts
+//hooks
+import React, { useMemo } from "react";
+// charts
 import BarChart from "../chart/BarChart";
 import SemiCircleChart from "../chart/SemiCircleChart";
 import LineChart from "../chart/LineChart";
 import MultiLayerDoughnutChart from "../chart/MultiLayerDoughnutChart";
 import MultiBarChart from "../chart/MultiBarChart";
 import DoughnutChart from "../chart/DoughnutChart";
-//configs chart
+// configs chart
 import {
   barChartOptions,
+  doughnutOptions,
   lineChartConfig,
   multiBarOptions,
   multiLayerDoughnutChartOptions,
   semiCircleChartOptions,
 } from "../../utils/chartConfig";
-//data chart
+// data chart
 import {
   barChartData,
   doughnutChartColors,
   doughnutChartData,
   lineChartData,
+  lineChartTabColors,
   multiChartTabsData,
   multiLayerDoughnutChartData,
   semiCirclePercentages,
   semiCircletabs,
 } from "../../utils/chartData";
-//ui
+// ui
 import Card from "./Card";
 
 function DesktopLayout() {
-  return (
-    <div className="flex flex-wrap gap-4 py-2 pl-2 w-[81vw] lg:w-[82vw]  border border-l  h-[calc(100vh-113px)]  custom-scroll overflow-y-auto">
-      {/* First Row */}
-      <Card
-        title={"Chart 1"}
-        description={"Description"}
-        className="w-[48%] lg:w-[25.79%]"
-        details={true}
-      >
+  const chartConfigs = [
+    {
+      title: "Chart 1",
+      description: "Description",
+      className: "w-[48%] lg:w-[25.79%]",
+      details: true,
+      component: (
         <SemiCircleChart
           data={semiCirclePercentages}
           config={semiCircleChartOptions}
           tabs={semiCircletabs}
         />
-      </Card>
-      <Card
-        title={"Chart 2"}
-        description={"Description"}
-        className="w-[48%] lg:w-[28.79%]"
-        details={true}
-      >
-        <BarChart data={barChartData} options={barChartOptions} />
-      </Card>
-      <Card
-        title={"Chart 3"}
-        description={"Description"}
-        className="md:w-[100%]  lg:w-[41%]"
-        details={true}
-      >
-        <LineChart chartData={lineChartData} chartConfig={lineChartConfig} />
-      </Card>
-
-      {/* Second Row */}
-      <Card
-        title={"Chart 4"}
-        description={"Description"}
-        className="md:w-[48%] lg:w-[25.29%] relative"
-        details={true}
-      >
+      ),
+    },
+    {
+      title: "Chart 2",
+      description: "Description",
+      className: "w-[48%] lg:w-[28.79%]",
+      details: true,
+      component: <BarChart data={barChartData} options={barChartOptions} />,
+    },
+    {
+      title: "Chart 3",
+      description: "Description",
+      className: "md:w-[100%] lg:w-[41%]",
+      details: true,
+      component: (
+        <LineChart
+          chartData={lineChartData}
+          chartConfig={lineChartConfig}
+          tabColors={lineChartTabColors}
+        />
+      ),
+    },
+    {
+      title: "Chart 4",
+      description: "Description",
+      className: "md:w-[48%] lg:w-[25.29%] relative",
+      details: true,
+      component: (
+        <MultiLayerDoughnutChart
+          data={multiLayerDoughnutChartData}
+          options={multiLayerDoughnutChartOptions}
+        />
+      ),
+      actions: (
         <div className="absolute flex items-center gap-4 top-6 right-[50px]">
           <button>
             <svg
@@ -111,33 +122,53 @@ function DesktopLayout() {
             </svg>
           </button>
         </div>
-        <MultiLayerDoughnutChart
-          data={multiLayerDoughnutChartData}
-          options={multiLayerDoughnutChartOptions}
-        />
-      </Card>
-      <Card
-        title={"Chart 5"}
-        description={"Description"}
-        className="md:w-[48%]  lg:w-[26.29%]"
-        details={true}
-      >
+      ),
+    },
+    {
+      title: "Chart 5",
+      description: "Description",
+      className: "md:w-[48%] lg:w-[26.29%]",
+      details: true,
+      component: (
         <DoughnutChart
           dataSets={doughnutChartData}
           colors={doughnutChartColors}
+          options={doughnutOptions}
         />
-      </Card>
-      <Card
-        title={"Chart 6"}
-        description={"Description"}
-        className="md:w-[100%]  lg:w-[44%]"
-        details={false}
-      >
+      ),
+    },
+    {
+      title: "Chart 6",
+      description: "Description",
+      className: "md:w-[100%] lg:w-[44%]",
+      details: false,
+      component: (
         <MultiBarChart
           tabsData={multiChartTabsData}
           options={multiBarOptions}
         />
-      </Card>
+      ),
+    },
+  ];
+  return (
+    <div className="flex flex-wrap gap-4 py-2 pl-2 w-[81vw] lg:w-[82vw] border border-l h-[calc(100vh-113px)] custom-scroll overflow-y-auto">
+      {chartConfigs.map(
+        (
+          { title, description, className, details, component, actions },
+          index
+        ) => (
+          <Card
+            key={index}
+            title={title}
+            description={description}
+            className={className}
+            details={details}
+          >
+            {actions && actions}
+            {component}
+          </Card>
+        )
+      )}
     </div>
   );
 }

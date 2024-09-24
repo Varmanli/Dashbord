@@ -10,7 +10,7 @@ import {
 // ثبت اجزای مورد نیاز
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend);
 
-function DoughnutChart({ dataSets, colors }) {
+function DoughnutChart({ dataSets, colors, options }) {
   const [activeTab, setActiveTab] = useState(0); // حالت برای تب‌ها
   const chartRef = useRef(null);
   const chartInstanceRef = useRef(null);
@@ -32,30 +32,6 @@ function DoughnutChart({ dataSets, colors }) {
       ],
     };
 
-    const options = {
-      responsive: true,
-      cutout: "74%", // ایجاد فضای مرکزی
-      plugins: {
-        legend: { display: false },
-        tooltip: { enabled: true },
-        // پلاگین به صورت لوکال فقط برای این چارت
-        centerText: {
-          beforeDraw(chart) {
-            const { width, height, ctx } = chart;
-            ctx.restore();
-            const fontSize = (height / 114).toFixed(2);
-            ctx.font = `${fontSize}em sans-serif`;
-            ctx.textBaseline = "middle";
-            const text = "1000"; // مقدار مرکزی
-            const textX = Math.round((width - ctx.measureText(text).width) / 2);
-            const textY = height / 2;
-            ctx.fillText(text, textX, textY);
-            ctx.save();
-          },
-        },
-      },
-    };
-
     // تخریب نمودار قبلی در صورت وجود
     if (chartInstanceRef.current) {
       chartInstanceRef.current.destroy();
@@ -66,7 +42,7 @@ function DoughnutChart({ dataSets, colors }) {
       type: "doughnut",
       data,
       options,
-      plugins: [options.plugins.centerText], // پلاگین به صورت محلی اعمال می‌شود
+      plugins: [options.plugins.centerText],
     });
 
     return () => {
@@ -74,7 +50,7 @@ function DoughnutChart({ dataSets, colors }) {
         chartInstanceRef.current.destroy();
       }
     };
-  }, [activeTab, dataSets, colors]);
+  }, [activeTab, dataSets, colors, options]);
 
   return (
     <div>

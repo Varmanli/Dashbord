@@ -70,6 +70,11 @@ export const lineChartData = [
     ],
   },
 ];
+export const lineChartTabColors = [
+  ["#637CEF", "#00B7C3"],
+  ["#FF6384", "#FF8A65"],
+  ["#4BC0C0", "#FFCE56"],
+];
 
 //doughnut chart data
 export const doughnutChartData = [
